@@ -1,0 +1,11 @@
+/apache-jmeter-5.2.1/bin/./jmeter.sh -n -t /apache-jmeter-5.2.1/extras/Test.jmx -l report.jtl
+ls
+pwd
+
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';")
+/apache-jmeter-5.2.1/bin/./jmeter.sh -n -t HTTP GET Request.jmx -l report.jtl
+
+/apache-jmeter-5.2.1/bin/./jmeter.sh -g report.jtl -o reports
+
+ls
+pwd
